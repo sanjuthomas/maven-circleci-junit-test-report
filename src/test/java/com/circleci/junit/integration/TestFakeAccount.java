@@ -34,7 +34,7 @@ public class TestFakeAccount{
 		assertEquals(0, account.balance(), 0);
 	}
 	
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void shouldNotLetToWithDraw(){
 		assertEquals(100.00, account.balance(), 0);
 		assertEquals(200, account.withdraw(102), 0);
